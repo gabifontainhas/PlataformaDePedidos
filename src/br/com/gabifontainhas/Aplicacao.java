@@ -10,7 +10,12 @@ public class Aplicacao {
 	public static void main(String[] args) {
 		UsuarioView usuarioView = new UsuarioView();
 		int opcao = 0;
-		System.out.print("Digite 1 para cadastrar novo usuário ou 2 para atualizar usuário existente: ");
+		System.out.print("Digite: \n"
+				+ "1 para cadastrar novo usuário \n"
+				+ "2 para atualizar usuário existente \n"
+				+ "3 para consultar um usuário por id \n" 
+				+ "4 para consultar todos os usuários \n"
+				);
 		opcao = Integer.valueOf(scanner.next());
 		switch (opcao) {
 		case 1:
@@ -19,6 +24,12 @@ public class Aplicacao {
 		case 2:
 			usuarioView.alterarUsuario();
 			break;
+		case 3:			
+			usuarioView.consultarUsuarioPorId();					
+			break;	
+		case 4:			
+			usuarioView.consultarTodosOsUsuario();					
+			break;	
 		case 9:
 			System.out.println("Saindo...");
 			break;
